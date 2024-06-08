@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>614</title>
+</head>
+<body>
+    <img id="newjeans" src="img/뉴진스.jpg" alt="">
+    <p id="click"></p>
+    <a href="https://www.instagram.com/danielle.newjeans" id="name"></p>
+    <script>
+        // document.getElementById("newjeans").addEventListener('click', (e)=>{
+        //     document.getElementById("click").innerText = 
+        //     `event type: ${e.type}, x좌표: ${e.pageX}, y좌표: ${e.pageY}`;
+        //     if(e.pageX >= 100  && e.pageX <= 200 && e.pageY >= 150 && e.pageY <= 250){
+        //     document.getElementById("name").innerText = "다니엘"
+        //     }else if(e.pageX >= 250 && e.pageX <= 400 && e.pageY >=180 && e.pageY <= 320){
+        //         document.getElementById("name").innerText = "해린"
+        //     }else if(e.pageX >= 400 && e.pageX <= 500 && e.pageY >= 150 && e.pageY <= 300){
+        //         document.getElementById("name").innerText = "하니"
+        //     }else if(e.pageX >= 530 && e.pageX <= 650 && e.pageY >= 100 && e.pageY <= 250){
+        //         document.getElementById("name").innerText = "혜인"
+        //     }else if(e.pageX >= 700 && e.pageX <= 850 && e.pageY >= 120 && e.pageY <= 270){
+        //         document.getElementById("name").innerText = "민지"
+        //     }
+        // });
+
+
+        document.getElementById("newjeans").addEventListener('click', (e)=>{
+            document.getElementById("click").innerText = 
+            `event type: ${e.type}, x좌표: ${e.pageX}, y좌표: ${e.pageY}`
+
+        let x = e.pageX;
+        let y = e.pageY;
+        if( (72 < x && x < 214) && (106 < y && y < 289) ){
+            document.getElementById("name").innerText = "다니엘";
+            // location.href = "https://www.instagram.com/danielle.newjeans/" / 다니엘 인스타로 이동
+        }
+        else{
+            document.getElementById("name").innerText = "멤버를 클릭하세요.";
+        }
+            
+        
+       
+
+    });
+    </script>
+</body>
+</html>

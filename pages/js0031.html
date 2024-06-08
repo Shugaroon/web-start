@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>591 태그이동, replace 이동</title>
+</head>
+<body>
+    <a href="https://www.naver.com">a tag, to naver</a>
+    <button onclick="location.replace('https://www.naver.com')">location.replace, to naver</button>
+    <button onclick="location.href = 'https://www.naver.com'">location.href, to naver</button>
+
+    <script>
+        document.write(`<p>location.href: ${location.href}</p>`);
+        document.write(`<p>location.host: ${location.host}</p>`);
+        document.write(`<p>location.protocol: ${location.protocol}</p>`);
+    </script>
+</body>
+</html>

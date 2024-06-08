@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p.280</title>
+    <style>
+        p{width: 100px;}
+        #pos1{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #pos2{
+            position: absolute;
+            top: 100px;
+            right: 100px;
+        }
+        #pos3{
+            position: absolute;
+            bottom: 100px;
+            left: 100px;
+        }
+        #header{
+            width: 100%;
+            height: 200px;
+            background-color: brown;
+        }
+        #absolute-container{
+            width: 100%;
+            height: 500px;
+            background-color: pink;
+            position: relative;
+        }
+        #pos4{position: relative; left: 50px;}
+        #pos5{position: relative;}
+        
+        </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="absolute-container">
+        <p id="pos1">글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 </p>
+        <p id="pos2">글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 </p>
+        <p id="pos3">글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 </p>
+    </div>
+    <div id="relative-container"></div>
+        <p id="pos4">글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 </p>
+        <p id="pos5">글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 </p>
+    
+    
+    
+    
+    
+    <div>
+        <h1>position 속성값</h1>
+        <b>static : 기본값</b><br>
+        <b>relateive : static과 유사하지만 이동이 가능</b><br>
+        <b>absolute : 선택된 상위 요소를 기준으로 절대 위치</b><br>
+        <b>fixed : 전체 페이지를 기준으로 절대 위치</b><br>
+    </div>
+</body>
+</html>

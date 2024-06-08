@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<script>
+    
+    
+//  JS     //    Java, typescript
+    var a = 1; // int a = 1;
+    var b = 1.2; // float b = 1.2;
+    var c = "cj" // String c = "cj"
+    
+// 변수 - 배열
+ var mathpointsOfStudents = [100, 90, 80];
+console.log("배열:", mathpointsOfStudents);
+console.log(mathpointsOfStudents.length);
+console.log(mathpointsOfStudents[1]);
+
+
+// 변수 - 객체
+ var students = {
+    name : "cj cho",
+    age : 30,
+    major : "english language and literature"
+ }
+
+// undefined : 값이 정해지지 않음. 
+var name;
+
+// null : 값이 유효하지 않음.(의미가 없음)
+var forUndefined;
+console.log("typeof_forUndefined", typeof(forUndefined));
+var forNull = null;
+if (forNull === null){
+    console.log("null 검출");
+}else{
+    console.log("null 아님");
+}
+
+console.log("5%3", 5%3);
+for(let i = 1; i <= 10; i++){
+    if(i % 3 ==0){
+        document.write("<span>짝</span>");
+    }else{
+        document.write("<span>"+ i +"</span>");
+    }
+}
+
+var a = 10;
+var b = a++ + 5;
+console.log("b:", b); // b: 15  후위연산자
+console.log("a:", a); // a: 11
+
+var a = 10;
+var b = ++a + 5;
+console.log("b:", b); // b: 16  전위연산자
+console.log("a:", a); // a: 11
+
+// 3 == "3" true (타입 신경안씀)
+// 3 === "3" false (타입이 다름) -> JS에만 있는 연산자
+
+// >= , <= (o)
+// => , =< (x)
+
+
+</script>
+
+    
+
+</body>
+</html>

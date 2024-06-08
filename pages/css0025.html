@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradation</title>
+    <style>
+        div{float: left; margin:5px; width: 200px; height: 200px;}
+        .gr1{
+            background: repeating-linear-gradient(yellow, red 20px);}
+        .gr2{
+            background: repeating-radial-gradient(circle, white, blue 10%);}
+        .gr3{
+            background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+        }
+        .gr4{
+            background: repeating-radial-gradient(circle, white, white 10%, blue 10%, blue 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="gr1"></div>
+    <div class="gr2"></div>
+    <div class="gr3"></div>
+    <div class="gr4"></div>
+</body>
+</html>

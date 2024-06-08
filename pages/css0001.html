@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project practice</title>
+    <style>
+        #userInfo{
+        display: flex;
+        justify-content: right;
+        }
+        input{margin: 3px;}
+        img{width: 500px; height: 500px;}
+        #pics{
+            border: 1px solid gray;
+            margin: 20px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;">HOTLEASE</h1>
+        <h2 id="subTitle" style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;" >The Magazinews</h2>
+    
+        <form id="userInfo">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="submit" value="Sign up" id="signUp">
+            <input type="submit" value="Login" id="login">
+        </form>
+        
+    </header>
+
+    <main>
+        <form id="category">
+            <input type="submit" value="new release">
+            <input type="submit" value="Best">
+            <input type="submit" value="Women">
+            <input type="submit" value="Men">
+            <input type="submit" value="community">
+            <input type="submit" value="market">
+        </form>
+        <hr>
+        <div id="pics">
+            <img src="img/gentle x margiela.jpg" alt="gentle monster x maison margiela" class="gen">
+            <img src="img/Palace_x_GAP.jpg" alt="palace x gap" class="pal">
+            <img src="img/supmargie1.jpg" alt="supreme x maison margiela" class="sup">
+        </div>
+            
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="test.js"></script>
+</body>
+</html>

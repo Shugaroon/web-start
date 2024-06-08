@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="editor" cols="50" rows="10"></textarea><br>
+    <button onclick="undo()">실행취소</button>
+    <button onclick="redo()">다시 실행</button>
+    <script>
+        let undoStack = []; // 입력 내용
+        let redoStack = []; // 취소버튼 눌렀을때 입력 내용
+        const editor = document.getElementById("editor");
+        editor.addEventListener('input', ()=>{undoStack.push(editor.value)});   
+        
+        function undo(){
+            if(undoStack.length > 0){ // textarea에 내용이 있다면
+                const content = undoStack.pop();
+                redoStack.push(editor.value);
+                editor.value = content;
+            }
+            else{
+                alert("취소할 내용이 없습니다.");
+            }
+        }
+
+        function redo(){
+            if(redoStack.length > 0){
+                const content = redoStack.pop();
+                undoStack.push(editor.value);
+                editor.value = content;
+            }else{
+                alert("되돌릴 내용이 없습니다");
+            }
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 1;
+        b = 1;
+
+
+        function calNum(){
+            var sum = 10 + 20; // 지역 변수
+            mul = 10 * 20; 
+        }
+        calNum();
+        console.log(mul)
+        console.log(sum)
+
+        var a = 10;
+        console.log(a);
+        var a = "hello"
+        console.log(a);
+
+
+
+        let a = 10;
+        console.log(a);
+        let a = "hello"   // 재정의 금지
+        console.log(a);   // Identifier 'a' has already been declared (at js0014.html:29:13)
+
+        {let a = 10;
+        console.log(a)};
+
+        {let a = "hello"
+        console.log(a)}; // let a가 블록 안에서만 영향을 미침.
+
+        {
+            let a = 10;
+            console.log(a)
+            a = 100;
+            console.log(a)
+        }                      // a 재할당 가능. (let a로 재선언은 불가.)
+
+        const serverAddress = "originalServerAddress";
+        serverAddress = "originalServerAddress";
+        serverAddress = "hackerServerAddress";
+
+        
+        
+
+    </script>
+</body>
+</html>

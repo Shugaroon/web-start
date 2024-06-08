@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="repository.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img_content">
+            <img src="img/x.jpg">
+        </div>
+        <div class="id_content">
+            <div>
+                <span>지금 일어나고 있는 일</span>
+            </div>
+            <div>   
+                <span style="font-size: 30px;">지금 가입하세요.<span>
+            </div> 
+            <form id="form">
+                <div id="topDiv">
+                        <button class="btn0">Google 계정으로 가입하기</button>
+                        <button class="btn1">Apple에서 가입하기</button>
+                </div>
+
+                <p class="hr-sect">또는</p>
+                <button class="btn2">계정 만들기</button>
+                <p id="policy">가입하시려면 <a ref="">쿠키 사용</a>을 포함해 <a ref="">이용약관</a>과 <a ref="">개인정보 처리방침</a>에 동의해야 합니다.</p>
+                <!-- span css가 아니라 링크를 주어야할듯 -->
+
+                <div class="bottomDiv">
+                    <h3>이미 트위터에 가입하셨나요?</h3>
+                    <button class="btn3">로그인</button>
+                </div>
+                
+            </form>
+            
+        </div>
+    </div>
+    <footer>푸터</footer>
+
+    <!-- 
+        버튼 안에 구글, 애플모양과 같은 이모티콘 추가
+        hr-sect 오른쪽 길이가 너무 길고 위아래로 간격이 너무 큼(구글링해서 퍼온거라 자세히 모름)
+        form부분이 조금 더 내려와야함 -> transform : translateY()로 해결.
+    !-->
+    
+    
+    <script src="/first_page/js/clone_x.js"></script>
+    
+</body>
+</html>

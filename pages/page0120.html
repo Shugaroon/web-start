@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM에서 form 다루기</h1>
+    
+    <div>
+        <form name="testForm">
+            <fieldset>
+                <legend>신청인</legend>
+                <ul>
+                    <li>
+                        <label for="username">이름</label>
+                        <input type="text" id="username">
+                    </li>
+                    <li>
+                        <label class="reg" for="class">학과</label>
+                        <select>
+                            <option>---학과를 선택하세요---</option>
+                            <option value="it">IT</option>
+                            <option value="design">디자인</option>
+                            <option value="humanities">인문학</option>
+                            <option value="business">상경</option>
+                        </select>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>신청 과목(radio)</legend>
+                <p>이달에 신청할 과목</p>
+                <label><input type="radio" name="subject" value="speaking">회화</label>
+                <label><input type="radio" name="subject" value="frontend">frontend</label>
+                <label><input type="radio" name="subject" value="backend">backend</label>
+            </fieldset>
+            <fieldset>
+                <legend>메일 서비스</legend>
+                <p>메일링 서비스를 신청해 보세요</p>
+                <label><input type="checkbox" name="mailing" value="db">DB</label>
+                <label><input type="checkbox" name="mailing" value="react">react</label>
+                <label><input type="checkbox" name="mailing" value="nodejs">node.js</label>
+            </fieldset>
+        </form>
+    </div>
+
+
+</body>
+</html>

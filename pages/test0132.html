@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 관련 함수 3형제 ( map, filter , reduce ); 
+        // map : 일괄 계산 
+        let max50 = [10, 20, 30, 40, 50];
+        let max100 = [10, 20, 40, 30, 70];
+
+        let count = [];
+
+        for(let i = 0; i < 5; i++){
+            count[i] = max50[i]*2;
+        }
+        console.log(count);
+
+        let count2 = max50.map((num)=>num*2);
+        console.log(count2);
+
+        // filter : 조건으로 걸러냄
+        // reduce : 누적 계산
+        
+
+
+        let filterd60=[];
+        for(let i =0; i < count2; i++){
+            if(max100[i] >=60){
+                filtered60.push(max100[i]);
+            }
+        }
+    
+        // let filtered60_2 = [];
+        // filtered60_2 = max100.filter(scrore => score >= 60);
+        // console.log(filtered60_2);
+
+        // reduce : 누적 계산
+        let data = [1,2,3,4,5]
+        let sum = 0;
+        for(let i = 0; i < data.length; i++){
+            sum = data[i];
+        }
+        
+        console.log(sum);
+
+        let sum2 = data.reduce( (total, now)=> total + now, 0);
+        console.log(sum2)
+    </script>
+
+
+</body>
+</html>

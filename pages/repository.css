@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}      /*위 코드들로 어떤 효과를 줄 수 있는지 궁금. */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    height: 95vh; 
+}
+.img_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+    padding: 20px;
+}
+.img_content img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.id_content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;    /* align-items 도 center를 주면 간격이 삐뚤빼뚤해짐 */
+    background-color: white; 
+    min-width: 600px;
+}
+
+footer {
+    background-color: rebeccapurple;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    height: 3vh; 
+}
+
+#form{
+    width: 400px;
+    transform: translateY(20px);    
+}
+
+span{
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.btn0 {
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.btn1{
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.btn2{
+    border: 1px solid gray;
+    background-color: rgb(29, 155, 240);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.btn3{
+    background-color: white;
+    border: 1px solid gray;
+    text-align: center; font-weight: bold;
+    color: #0077ff;
+    padding: 10px;
+}
+
+.btn0, .btn1, .btn2, .btn3{
+    width: 300px;
+    border-radius: 9999px;
+    margin: 4px;
+    font-size: 15px;
+}
+
+.hr-sect{ display: flex; 
+    flex-basis: 100%; 
+    align-items: center;
+}
+.hr-sect::before, .hr-sect::after {
+    content: ""; 
+    flex-grow: 1; 
+    background: rgba(0, 0, 0, 0.05); 
+    height: 1px; 
+    font-size: 0px; line-height: 0px; 
+    margin: 0px 8px;
+}
+
+#policy{
+    width: 75%;
+    font-size: 10px;}
+
+a{
+    color: rgb(0, 132, 255);
+    text-align: center;
+}
+a:hover{
+    text-decoration: underline;
+}

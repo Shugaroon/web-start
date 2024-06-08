@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM에 p 태그를 추가하기</h1>
+    <button onclick="addP(); this.onclick='';">새로운 p 추가</button>
+
+    <div id="info"></div>
+    
+    <script>
+        function addP(){
+            var newP = document.createElement("p");
+            var txtMode = document.createTextNode("바나나");
+            newP.appendChild(txtMode);
+            document.getElementById("info").appendChild(newP)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보자</p>
+    <input type="text" id="subject">
+    <button onclick="addP()">추가</button>
+    <div id="info">
+
+    </div>
+
+
+    <script>
+        function addP(){
+            let subject = document.getElementById("subject");
+            let newP = document.createElement("p");
+            let newTxt = document.createTextNode(subject.value);
+            newP.appendChild(newTxt);
+            document.getElementById("info").insertBefore(newP,info.childNodes[0]);
+            subject.value = '';
+
+            let items = document.querySelectorAll("p");
+            for (let i = 0; i < items.length; i++){
+                items[i].addEventListener("click", function(){
+                    if(this.parentNode){
+                        this.parentNode.removeChild(this);
+                    }
+                });
+            }
+        }
+
+    </script>
+</body>
+</html>

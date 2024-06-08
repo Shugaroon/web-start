@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="editor" cols="50" rows="10"></textarea><br>
+  <button onclick="undo()">실행취소</button>
+  <button onclick="redo()">다시 실행</button>
+
+
+    <script>
+// const arr = []
+// while (true) {
+//   const input = parseInt(prompt("자연수입력 ㄱ"))
+//   if (input < 0) {
+//     continue
+//   } 
+//   if (input === 0 && arr.length > 0) {
+//     break
+//   }
+//   arr.push(input)
+// }
+// console.log(`최소값 : ${Math.min(...arr)}`)
+// console.log(`최대값 : ${Math.max(...arr)}`)
+
+// const filtered = arr.filter((num) => num >0)
+// const avg = arr => arr.reduce((p, c) => p + c, 0) / arr.length
+// console.log(`평균 ${avg(filtered)}`)
+let undoStack = [];
+let redoStack = [];
+let isUndoRedo = false;
+const editor = document.getElementById("editor");
+
+editor.addEventListener("input", function (event) {
+  if (!isUndoRedo) {
+    setTimeout(() => {
+      if (
+        undoStack.length === 0 ||
+        undoStack[undoStack.length - 1] !== editor.value
+      ) {
+        undoStack.push(editor.value);
+        redoStack = [];
+      }
+    }, 0);
+  }
+});
+
+function undo() {
+  if (undoStack.length > 1) {
+    isUndoRedo = true;
+    const currentState = undoStack.pop();
+    redoStack.push(currentState);
+    const previousState = undoStack[undoStack.length - 1];
+    editor.value = previousState;
+    setTimeout(() => {
+      isUndoRedo = false;
+    }, 0);
+  }
+}
+
+function redo() {
+  if (redoStack.length > 0) {
+    isUndoRedo = true;
+    const redoState = redoStack.pop();
+    undoStack.push(redoState);
+    editor.value = redoState;
+    setTimeout(() => {
+      isUndoRedo = false;
+    }, 0);
+  }
+}
+
+
+    </script>
+</body>
+</html>

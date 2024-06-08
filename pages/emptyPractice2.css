@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    
+    
+}
+.header-container{
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+    height: 10vh;
+}
+#header-left-container{background-color: orange; align-items: center; text-align: center;}
+#header-right-container{background-color: darkgray; align-items: center; text-align: center;}
+#header-left-container, #header-right-container{
+    display: grid;
+    color: white;
+}
+
+#header-left-container::before{
+    transform:rotate(45deg);
+}
+#header-right-container::after{
+    content: '  ';
+    transform:rotate(-45deg);
+}
+
+#header-right-container::after{
+    
+}
+
+#header-left-container:hover {cursor: pointer;}
+#header-right-container:hover {cursor: pointer;}
+    
+.nav-container{
+    background-color: beige;
+}
+
+#myTerior{
+    
+}
+
+
+main{
+    margin: 5%;
+}
+
+#banner{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 80vh;
+    
+    
+}
+
+.imgBar{
+    background-image: url("img/interior2.jpg"); background-size: cover;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-wrap">
+            <div class="profile">
+                {% if user and user.id %}
+                <p>로그인 되었을 경우</p>
+                <div class="user-name">{{'안녕, '+ user.nick + '님'}}</div>
+                <div class="half">
+                    <div>팔로잉</div>
+                    <div class="count following-count">{{followingCount}}</div>
+                </div>
+                <div class="half">
+                    <div>팔로워</div>
+                    <div class="count follower-count">{{followerCount}}</div>
+                </div>
+                <input id="my-id" type="hidden" value="{{user.id}}">
+                <a id="my-profile" href="/profile" class="btn">내 프로필</a>
+                <a id="logout" href="/auth/logout" class="btn">로그아웃</a>
+
+                {% else %}
+                <p>로그인 안 되었을 경우</p>
+                <form action="/auth/login" method="post" id="login-form">
+                    <div class="input-group">
+                        <label for="email">이메일</label>
+                        <input id="email" type="email" required autofocus>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">비밀번호</label>
+                        <input id="password" type="password" required> 
+                    </div>
+                    <a href="/join" class ="btn" id="join">회원가입</a>
+                    <button id="login" type="submit" class ="btn" >로그인</button>
+                    <a href="/auth/kakao" class ="btn" id="kakao">카카오톡</a>
+                </form>
+
+                {% endif %}
+            </div>
+            <footer>
+                푸터
+            </footer>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      window.onload = () => {
+        if (new URL(location.href).searchParams.get('error')) {
+          alert(new URL(location.href).searchParams.get('error'));
+        }
+      };
+    </script>
+    {% block script %}
+    {% endblock %}
+                        aaaaaaa
+</body>
+</html>

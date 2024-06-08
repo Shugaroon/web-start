@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let arr1 = ["a", "b", "c"];
+    for(let i = 0; i < arr1.length; i++){
+        console.log(arr1[i]);
+    }
+
+    // forEach문
+
+    arr1.forEach((char) => {console.log(char)}); 
+
+    // for in문 : 객체(key:value)
+    const student = {
+        name: "조민성",
+        age : "맏형",
+        etc : "사람들 괴롭히지는 않아요"
+    };
+
+    for(key in student){
+        console.log(key + ":" + student[key])
+    }
+    
+    for (let char of arr1){
+        console.log(char);
+    }
+
+    
+    </script>
+    
+</body>
+</html>

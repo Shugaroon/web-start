@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="set_my_cookie()">쿠키설정</button>
+    <button onclick="get_my_cookie()">쿠키살펴보기</button>
+    <button onclick="reset_my_cookie()">쿠키리셋</button>
+   
+   
+   <script>
+        document.cookie = "username=rnballard";
+
+        function set_my_cookie(){document.cookie = "username=rnbset";};
+        function get_my_cookie(){alert(document.cookie);};
+        function reset_my_cookie(){document.cookie = "username=";};
+        
+   </script>
+</body>
+</html>

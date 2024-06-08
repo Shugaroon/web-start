@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+        let name = '조찬증';
+
+        function practice1(){
+            let greeting = '안녕하세요!';
+            console.log(greeting, name);
+        };
+        
+        practice1();
+
+        console.log('----------------------');
+
+
+        let name2 = '고준기';
+        
+        function practice2(){
+            let greeting2 = '반갑습니다.';
+            name2 = '최윤정'; // 외부 변수 name2의 값을 함수 내부에서 변경하였음.
+            console.log(`${name2}님 ${greeting2}`); // 변수 name2는 '최윤정'이 되었음.
+        };
+
+        console.log(name2); // 함수 호출 전이기 때문에 외부변수인 '고준기'가 그대로 출력됨.
+        
+        practice2();
+
+        console.log(name2); // 함수에 의해 변수 name2가 '최윤정'으로 값이 변경됨.
+
+        console.log('----------------------');
+
+        let name3 = '이현경' // 전역 변수 (해당 예시에선 같은 이름을 가진 지역 변수에 의해 가려짐 but 그렇지 않은 경우 모든 함수에 접근이 가능.)
+
+        function practice3(){
+            let name3 = '신수민'; // 외부 변수와 동일한 이름의 변수를 함수 내부에 만들었음.
+            let message = `안녕하세요 ${name3}님.`;
+            console.log(message);
+        };
+
+        practice3();
+        console.log(name3); // 함수 내부에서 외부 변수와 동일한 이름의 변수를 만들었지만 외부 변수에는 영향을 주지 않았음.
+
+        console.log('----------------------');
+
+        // 매개변수 = 인자 (parameter)
+
+        function showMessage(from, text) { // 인자: from, text
+            console.log(`${from} ${text}`);
+        }
+
+        showMessage('Hello', '준기!'); 
+        showMessage("What's up", "윤정!"); 
+
+
+        console.log('----------------------');
+        
+        function showMessage2(from2, text){
+            from2 = `*${from2}*`
+            console.log(`${text} ${from2}야`);
+        }
+
+        let from2 = '준기'
+
+        showMessage2(from2, "안녕");
+        console.log(from2); // 함수는 복사된 값을 사용한다. 따라서 외부변수 from2의 값은 변경되지 않음.
+
+        console.log('----------------------');
+
+        function showMessage3(from, text = "no text given"){ // 두번째 인자를 text = "no text given"로 변경하면  
+            console.log(from + text);
+        }
+
+        showMessage3("안녕"); // from에만 인수전달, text엔 전달될 인수가 없어 undefined로 출력됨.
+        showMessage3("안녕", undefined)
+
+
+        function yes(i, j){
+            return i + j;
+        }
+       
+        let plus1 = yes(1,2);
+        let plus2 = yes(5,5);
+
+        console.log(plus1, plus2);
+        
+        console.log('----------------------');
+
+        let age = 17;
+        
+        function checkAge(age) {
+            if (age > 18) {
+                return console.log('admit')
+            }
+            return console.log('보호자의 동의를 받으셨나요?');
+        }
+        
+        checkAge(age);
+
+
+
+        function min(a, b){
+            if (a > b){
+                return b
+            }
+            return a;
+        }
+
+        one = min(2, 5);
+        two = min(3, -1);
+        three = min(1, 1);
+
+        console.log(one, two, three);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "my_first_node",
+  "version": "0.0.1",
+  "description": "내가 처음으로 만들어 본 npm 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CJCHO",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "morgan": "^1.10.0"
+  }
+}

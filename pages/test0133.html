@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이터러블(iterable)
+        // for of
+        // 배열
+
+        let mapStudent = new Map([
+            ["name","박의영"],
+            ["조","1조"],
+            ["상태","밤샘"]
+        ]);
+        console.log(mapStudent);
+        mapStudent.set("major","design");
+        console.log(mapStudent);
+        console.log(mapStudent.keys() );
+        console.log(mapStudent.values() );
+        console.log(mapStudent.entries() );
+
+        for(let key of mapStudent.keys()){
+            console.log(key);
+        }
+
+        // set(셋): 요소 중 중복 제거, 집합
+        let array = [1,2,3,2,1];
+        let set1 = new Set(array); // array 배열 요소중 중복값을 제거해서 만들어줘
+        console.log(set1); // [1,2,3]
+        set1.add(10); // set1 배열에 요소 10을 넣어저
+        console.log(set1);
+        console.log(set1.has(10));
+        set1.delete(2);
+        console.log(set1)
+        set1.clear();
+        console.log(set1);
+
+        let stu1 = ["html", "css"];
+        let stu2 = ["js", "html"];
+        let stu3 = ["js", "react"];
+
+        let teamAvail = [...stu1, ...stu2, ...stu3];
+        console.log(teamAvail);
+        let teamSet = new Set(teamAvail);
+        console.log(teamSet);
+        
+        // next()
+
+        let arr = [1,2,3,4,5];
+        let iterator = arr[Symbol.iterator]();
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+
+        // 제너레이터: 일반 객체를 이터러블하게 해줌
+        // function -> function*
+        // return -> yield
+        function* gen1 (){
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+        }
+        let g1 = gen1();
+
+        console.log(g1.next());
+        console.log(g1.next());
+        console.log(g1.next());
+        console.log(g1.next());
+
+        let g2 = gen1();
+        for (let i of g2){
+            console.log(i);
+        }
+
+
+    </script>
+</body>
+</html>

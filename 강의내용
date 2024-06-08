@@ -1,0 +1,57 @@
+포트폴리오 핵심 역량
+
+- 저는 이런 성장을 했고, 앞으로 이렇게 성장할 계획이라 당신들과 합이 잘 맞습니다.
+or 서로 의지가 가능 할 것 같습니다.
+
+snapshout(현재능력) 보단 timeline(잠재력)을 위주로!
+---> 좋은 말이긴 하나 아직은 뜬구름 잡는 이야기같음....
+
+service B2C - 개인 고객에게 수요를 만족시킴(네카라쿠배당토)
+SI - B2B - 고객이 기획(갑) / Outsourcing 구현(을)
+solution B2B - 자체 솔루션 수립
+
+
+포트폴리오 관리 pool
+=> 문서,배포,블로그(노션,네이버 등),Github
+
+
+
+CRUD    ex- 쇼핑몰              Web
+
+create      주문               Post
+read        주문내역서 확인     get
+update      주문 수정           patch/put
+delete                         delete
+
+html : form
+js : fetch -> axios
+ 
+
+*CSS
+<button attributes>contents</button>
+
+attributes(속성)과 contents(콘텐츠)의 차이: 속성과 다르게 콘텐츠에는 디자인을 입힐 수 있다.
+
+
+하이브리드 웹, 웹앱 vs 네이티브 앱(ios, win, android...)
+
+React(웹 기본) vs React native(각 운영체제에 맞는 네이티브 앱 창출가능)
+
+
+인터넷은 정보의 바다이다(x)
+->데이터의 바다이다
+
+빅데이터 반 - 사금 캐기(걸러내기)
+
+Q. 개발자에게 필요한 커뮤니케이션 능력이란?
+A. 같은 fe/be 개발자 나아가서는 기획자, 디자이너 등과 협업을 하는 경우가 많은데, 
+그들이 궁금해 하거나 요구하는 내용을 효과적이고 설득력있게 전달하는 능력, 
+
+
+20240409
+
+HTML
+
+XML
+
+JSON

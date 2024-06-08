@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>356</title>
+    <style>
+        #container{
+            width: 100%;
+            height: 200px;}
+        .origin{
+            width: 100px; height: 100px; 
+            border: 1px solid black; 
+            float: left; 
+            margin: 50px;
+            background-color: yellowgreen;}
+        .origin div{
+            width: 100px; height: 100px; 
+            background-color: orange;}
+        #movex:hover{transform: translateX(50px);}
+        #movey:hover{transform: translateY(50px);}
+        #movexy:hover{transform: translate(50px, 50px);}
+
+        #scalex:hover{transform: scalex(2);}
+        #scaley:hover{transform: scaley(1.5);}
+        #scalexy:hover{transform: scale(0.7);}
+        
+        .origin img{width: 100px; height: 100px;}
+        #rotate1:hover{transform: rotate(45deg);}
+        #rotate2:hover{transform: rotate(-45deg);}
+
+        .rotatex:hover{transform: rotateX(45deg);}
+        .perspective{perspective: 300px;}
+        #rotatex:hover{transform: rotateX(45deg)}
+        #rotatey:hover{transform: rotateY(45deg)}
+        #rotatez:hover{transform: rotateZ(45deg)}
+        #rotatexyz:hover{transform: rotate3d(1, 1, 1, 45deg)}
+        
+        #skewx:hover{transform: skewX(45deg)}
+        #skewy:hover{transform: skewY(45deg)}
+        #skewxy:hover{transform: skew(45deg, -30deg)}
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+    <br>
+    <p>translate : 평행이동(x,y)</p>
+    <div id="container">
+        <div class="origin">
+            <div id="movex">item1</div>
+        </div>
+        <div class="origin">
+            <div id="movey">item2</div>
+        </div>
+        <div class="origin">
+            <div id="movexy">item3</div>
+        </div>
+    </div>
+
+    
+    <p>scale : 확대 축소(x,y)</p>
+    <div id="container">
+        <div class="origin">
+            <div id="scalex">item1</div>
+        </div>
+        <div class="origin">
+            <div id="scaley">item2</div>
+        </div>
+        <div class="origin">
+            <div id="scalexy">item3</div>
+        </div>
+    </div>
+
+    <p>rotate : 회전</p>
+    <div id="container">
+        <div class="origin">
+            <img src="img/custom_image_list.png" id="rotate1">
+        </div>
+        <div class="origin">
+            <img src="img/custom_image_list.png" id="rotate2">
+        </div>
+    </div>
+
+    <p>perspective : 원근감</p>
+    <div id="container">
+        <div class="origin">
+            <div class="rotatex">
+                <img src="img/custom_image_list.png">
+            </div>
+        </div>
+        <div class="origin perspective">
+            <div class="rotatex">
+                <img src="img/custom_image_list.png">
+            </div>
+        </div>
+    </div>
+
+    <p>3d rotate : 3차원 회전</p>
+    <div id="container">
+        <div class="origin perspective">
+            <div id="rotatex">item_x</div>
+        </div>
+        <div class="origin perspective">
+            <div id="rotatey">item_y</div>
+        </div>
+        <div class="origin perspective">
+            <div id="rotatez">item_z</div>
+        </div>
+        <div class="origin perspective">
+            <div id="rotatexyz">item_xyz</div>
+        </div>
+    </div>
+
+    <p>skew : 왜곡</p>
+    <div id="container">
+        <div class="origin perspective">
+            <div id="skewx">item_x</div>
+        </div>
+        <div class="origin perspective">
+            <div id="skewy">item_y</div>
+        </div>
+        <div class="origin perspective">
+            <div id="skewxy">item_xy</div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

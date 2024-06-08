@@ -1,0 +1,24 @@
+<h1>{{title}}을 전달 받았음</h1>
+<p>{{title}}님 반가워요</p>
+{% set innerValue = '내부 값' %}
+<p>내부값 : {{innerValue}}</p>
+
+<p>{{''}}</p>
+
+
+<ul>
+    {% for item in fruits %}
+        <li>{{loop.index}}번째 {{item}}</li>
+    {% endfor %}
+</ul>
+
+0: 그런 사용자 없음 회원 가입 유도, 1: 로그인 됨, 2:비번오류
+{% if isloggedin == 0 %}
+<p>회원가입하세요</p>
+{% if isloggedin == 1 %}
+<p>어서오세요</p>
+{% if isloggedin == 2 %}
+<p>비번을 다시 넣으세요</p>
+{% else %}
+<p>알 수 없는 오류</p>
+{% endif %}

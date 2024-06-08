@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>415</title>
+    <style>
+        .container{
+            display: flex;
+            margin: 10px;
+            background-color: gray;
+            }
+        
+        .box{
+            width: 100px;
+            padding: 20px;
+            margin: 10px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        #opt1{flex-wrap: nowrap;}
+        #opt2{flex-wrap: wrap;}
+        #opt3{flex-wrap: wrap-reverse;}
+        
+    </style>
+</head>
+<body>
+    <h3>플렉스 항목의 줄을 바꾸는 flex-wrap 속성</h3>
+    <div class="container" id="opt1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>

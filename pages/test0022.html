@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #space p{color: blue;}
+        #parent-child > p{ color: red;}
+        #adj + p{background-color: black; color: white;}
+        #sibling ~ p{background-color:black; color:white;}
+    </style>
+</head>
+<body>
+    <h1>연결 선택자</h1>
+    <p>빈칸, >, +, ~</p>
+    <h2>하위 선택자</h2>
+    <p>#space pP{}</p>
+    
+    
+    <hr>
+    <h2>하위 선택자</h2>
+    
+    <section id="space">
+        <h1>예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이.......<p>
+        <div>
+            <p>가족실(2~4인) : 60000원</p>
+            <p>도미토리(4인공용): 25000원</p>
+        </div>
+        
+    </section>
+
+    <h2>자식 선택자</h2>
+    
+    <section id="parent-child">
+        <h1>예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이.......<p>
+        <div>
+            <p>가족실(2~4인) : 60000원</p>
+            <p>도미토리(4인공용): 25000원</p>
+        </div>
+    </section>
+
+    <h2>인접 형제 vs 형제</h2>
+    
+    <h4>인접 형제 선택자 + </h4>
+    <section>
+        <h1 id="adj">예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이.......<p>
+        <p>가족실(2~4인) : 60000원</p>
+        <p>도미토리(4인공용): 25000원</p>
+    </section>
+
+    <h4>형제 선택자 ~</h4>
+    <section>
+        <h1 id="sibling">예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이.......<p>
+        <p>가족실(2~4인) : 60000원</p>
+        <p>도미토리(4인공용): 25000원</p>
+    </section>
+    
+
+    
+
+    
+
+    
+</body>
+</html>

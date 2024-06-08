@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>309</title>
+    <style>
+        div{
+            width: 100px; height: 100px;
+            float: left;
+            margin: 5px;
+            border: 1px solid black;
+        }
+        #g1{background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green);}
+        #g2{background: radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);}
+        #g3{background: radial-gradient(circle farthest-side at 30% 40%, white, yellow, green);}
+        #g4{background: radial-gradient(circle farthest-corner at 30% 40%, white, yellow, green);}
+        #g5{background: radial-gradient(circle at 30% 40%, white, yellow, green);}
+    </style>
+</head>
+<body>
+    <div id="g1">closest-side</div>
+    <div id="g2">closest-corner</div>
+    <div id="g3">farthest-side</div>
+    <div id="g4">farthest-corner</div>
+    <div id="g5">default</div>
+</body>
+</html>

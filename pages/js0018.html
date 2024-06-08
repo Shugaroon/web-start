@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>546-2</title>
+</head>
+<style>
+    #desc{
+            display: none;
+        }
+        #open{
+            background-color: rgba(255, 255, 255, 0.445);
+            position: absolute; top: 180px; left: 5%;
+            border: solid rgba(0, 0, 0, 0);
+        }
+        #item{position:relative;width: 300px;}
+        #item img{width: 300px;}
+</style>
+<body>
+
+    <div id="item">
+        <img src="img/flower.jpg">
+        <button id="open" onclick="showDetail()">상세 설명 보기</button>
+        
+        <div id="desc">
+            <h1>등심 붓꽃</h1>
+            <p>북아메리카 원산응로 각지에서 관상초로 흔히 심고 있는</p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+    <script>
+        
+        let btnStatus = true;
+
+        function showDetail(){
+            if(btnStatus == true){
+                document.querySelector("#desc").style.display = "block";
+                document.querySelector("#open").innerText = "상세 설명 닫기";
+                btnStatus = false;
+            }else{
+                document.querySelector("#desc").style.display = "none";
+                document.querySelector("#open").innerText = "상세 설명 보기";
+                btnStatus = true;
+            }          
+        }
+        
+            
+            
+    </script>
+
+</body>
+</html>

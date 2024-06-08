@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>373</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .page-title h1{text-align: center;}
+        .prod-list ul{list-style: none;}
+        .prod-list li{
+            float: left;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            }
+        .prod-list li:hover .caption{
+            transform: translateY(-230px);
+            opacity: 1;
+            text-align: center;
+        }
+        .prod-list .caption{
+            width: 300px; height: 200px;
+            position: absolute; top: 250px;
+            z-index: 10;
+            color: white;
+            background-color: rgba(0,0,0,0.6);
+            opacity: 0;
+            transition: all 2s ease-in-out;
+            text-align: center;
+        }
+        .prod-list .img{z-index: 5;}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-title">
+            <h1>신상품 목록</h1>
+        </div>
+        <div class="prod-list">
+            <ul>
+                <li>
+                    <img src="img/prod1.jpg">
+                    <div class="caption">
+                        <h2>상품 1</h2>
+                        <p>상품 1 설명</p>
+                        <p>가격: 원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod2.jpg">
+                    <div class="caption">
+                        <h2>상품 2</h2>
+                        <p>상품 2 설명</p>
+                        <p>가격: 원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod3.jpg">
+                    <div class="caption">
+                        <h2>상품 3</h2>
+                        <p>상품 3 설명</p>
+                        <p>가격: 원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

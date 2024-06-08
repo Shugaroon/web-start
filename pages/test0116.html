@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;}
+        .row{width: 380px; margin: auto; }
+        .row ul{list-style: none; margin: 0; padding: 0;}
+        .row ul li{display: inline;}
+
+        #lightbox{
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.486);
+            display: none;
+        }
+        #lightbox-image{
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            border: 3px solid white
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="img/tree-1-thumb.jpg" data-src="img/tree-1.jpg" class="pic"></li>
+            <li><img src="img/tree-2-thumb.jpg" data-src="img/tree-2.jpg" class="pic"></li>
+            <li><img src="img/tree-3-thumb.jpg" data-src="img/tree-3.jpg" class="pic"></li>
+            <li><img src="img/tree-4-thumb.jpg" data-src="img/tree-4.jpg" class="pic"></li>
+            <li><img src="img/tree-5-thumb.jpg" data-src="img/tree-5.jpg" class="pic"></li>
+            <li><img src="img/tree-6-thumb.jpg" data-src="img/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="" id="lightbox-image">
+    </div>
+    <script>
+        let pics = document.getElementsByClassName("pic");
+        let lightboxImage = document.getElementById("lightbox-image");
+        let lightbox = document.getElementById("lightbox");
+
+
+        function showLightBox(){
+            let imgBig = this.getAttribute("data-src");
+            lightboxImage.setAttribute("src", imgBig);
+            lightbox.style.display = 'block';
+        }
+
+        for(let i = 0; i < 6; i++){
+            pics[i].addEventListener("click", showLightBox);
+        }
+
+        lightbox.onclick = ()=>{lightbox.style.display = 'none';}
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>576~580 브라우저 관련 객체</title>
+</head>
+<body>
+    <button onclick="openPop4()">pop4 open</button>
+
+    <script>
+
+        window.open("js0024.html","", "width=200, height=400"); // 팝업 차단 -> 허용 변경해주기
+        window.open("js0025.html","pop2", "width=500, height=400, left=100, top=100"); 
+        window.open("js0026.html","pop3", "width=500, height=400, left=500, top=100");  // 두번째 요소
+
+        function openPop4(){
+            window.open("js0027.html","pop2", "width=500, height=400, left=900, top=100"); 
+            // "pop2" 이름 중복으로 쓰면 기존에 띄운 "pop2" 팝업이 덮어짐
+        }
+    </script>
+</body>
+</html>

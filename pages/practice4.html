@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        background-color: skyblue;
+        text-align: center;
+        padding: 30px;
+    }
+    .nav{
+        background-color: pink;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+    .nav a{
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+    }
+    .main{
+        display: flex;
+        /* flex: 1;  */
+        height: 100%;
+        min-height: ;
+    }
+    .article{
+        flex: 6;
+    }
+    .aside{
+        background-color: lightgray;
+        flex: 4;
+    }
+
+    .article, .aside{
+        padding: 30px;
+    }
+    .footer{
+        background-color: chocolate;
+        padding: 30px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+</style>
+<body>
+    <header class="header">
+        <h2>Header</h2>
+    </header>
+    <nav class="nav">
+        <a href="">Menu1</a>
+        <a href="">Menu2</a>
+        <a href="">Menu3</a>
+    </nav>
+    <main class="main">
+        <article class="article">
+            <h2>ARTICLE</h2>
+            <h3>This is article</h3>
+            <p>article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article article </p>
+        </article>
+        <aside class="aside">
+            <h2>ASIDE</h2>
+            <p>aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside aside </p>
+        </aside>
+    </main>
+    <footer class="footer">
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>

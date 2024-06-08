@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[style], span[style]{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>block vs inline</h1>
+
+    <h2>block은 혼자 한줄을 전부 차지한다. => p, div, ...</h2>
+
+    <h2>inline은 작성한 콘텐츠만큼만 영역을 차지한다. => button, img, span, ...</h2>
+
+    <p>p tag</p> <p>p tag</p>
+    
+    <div>div tag</div>
+    
+    <span>span tag</span> <span>span tag</span>
+
+    <p>
+        블록 레벨 요소는 자기 자신이 한줄을 전부 차지한다, 인라인 레벨 요소는 콘텐츠까지만 영역을 차지한다 
+    </p>
+
+    
+    <p style="width: 300px; height: 200px;">p tag 300px x 200px</p>
+    <p style="width: 300px; height: 200px;">p tag 300px x 200px</p>
+    <span style="width: 300px; height: 200px;">span tag 300px x 200px</span>
+    <span style="width: 300px; height: 200px;">span tag 300px x 200px</span>
+
+    <p>img 태그는 inline 요소이지만 크기조절이 가능하다</p>
+    <img src="img/하니8.png" width="50px" height="50px">
+    <img src="img/하니8.png" width="50px" height="50px">
+    
+    
+</body>
+</html>

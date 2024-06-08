@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 2fr 7fr 1fr;
+            grid-gap: 40px;
+            height: 100%;
+        }
+
+        .header{
+            background-color: lightgray;
+            text-align: center;
+        }
+        .banner{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+        }
+        .main{
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 40px;
+            padding: 30px;
+        }
+        .card{
+            border: 1px solid black;
+            background-color: white;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            font-size: 28px; font-weight: bold;
+        }
+        .aside{
+            background-color: darkgray;
+        }
+        .footer{
+            background-color: antiquewhite;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="item header">
+            <h2>Header</h2>
+        </header>
+        <div class="banner">
+            <main class="main">
+                <div class="card">card1</div>
+                <div class="card">card2</div>
+                <div class="card">card3</div>
+                <div class="card">card4</div>
+                <div class="card">card5</div>
+                <div class="card">card6</div>
+                <div class="card">card7</div>
+                <div class="card">card8</div>
+            </main>
+            <aside class="item aside">
+                <h2>aside</h2>
+            </aside>
+        </div>
+        <footer class="item footer">
+            <h2>footer</h2>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>492~502</title>
+</head>
+<body>
+
+    <h1>반복문 for & while & do...while</h1>
+
+    <script>
+            var sumVal = 0;
+            
+            for(var i = 0; i < 6; i++){
+            document.write(`<p>현재 i는 ${i}입니다.<p>`);
+            sumVal = sumVal + i;
+            };
+            document.write(`<p>현재 sumVal은 ${sumVal}입니다.<p>`);
+
+           
+
+            var sumVal = 0;
+            var i = 0;
+
+            while(i < 6){
+                document.write(`<p>현재 i는 ${i}입니다.<p>`);
+                sumVal = sumVal + i;
+                i++
+            };
+            document.write(`<p>현재 sumVal은 ${sumVal}입니다.<p>`);
+
+
+            var sumVal = 0;
+            var userNumber = 0;
+            
+            do{
+                userNumber = prompt("자연수를 입력하세요. 마치려면 0을 입력하세요.");
+                userNumber = parseInt(userNumber);
+                sumVal += userNumber;
+            }while(userNumber > 0)
+            document.write(`<p>현재 sumVal은 ${sumVal}입니다.<p>`);
+    </script>
+    
+    <h1>break vs continue</h1>
+    <p>반복문을 멈추는 break, 건너뛰는 continue</p>
+
+    <script>
+        var myCount = 0;
+        var isSick = 0;
+        for(var day = 1; day <= 90; day++){
+            isSick++;
+            if(isSick >= 80) break;
+            if(isSick % 10 ==0) continue;
+            myCount++;
+        }
+        document.write(`나는 ${myCount}일 참여 했어요`)
+
+
+        for(i= 1; i <=10; i++){
+            i= i+1
+        }
+    </script>
+</body>
+</html>

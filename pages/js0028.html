@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>582</title>
+</head>
+<body>
+    <script>
+
+        var newWin = window.open("js0029.html", "", "width=400, height=400");
+        console.log(newWin) // 팝업 차단 상태이면 null
+        
+        if(newWin == null){
+            alert("팝업 허용 해주세요")
+        }else{newWin.moveBy(500, 500);}
+    </script>
+</body>
+</html>

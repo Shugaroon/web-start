@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 프로토타입, 상속
+            function Book(title, price){               
+                this.title = title;
+                this.price = price;
+            }                                      // chrome console에서 book.prototype 확인 -> object 상속
+   
+
+    Book.prototype.buy = function(){
+        console.log(`${this.title}책을 ${this.price}원에 구매했어요`)
+    }                                              // .buy 추가 설정 가능
+   
+
+    const Book1 = new Book ("front tech", 30000);
+    Book1.buy();
+    
+    function TextBook(title, price, major){
+        Book.call(this, title, price)
+        this.major = major
+    }
+    
+    TextBook.prototype.buyTextBook = function(){
+        console.log(`${this.title}책을 ${this.major}전공생 할인을 받아서 ${this.price}원에 구매했어요`);
+    }
+    Object.setPrototypeOf(TextBook.prototype, Book.prototype); // prototype 연결 - 상속
+    const TextBook1 = new TextBook("front tech", 30000, "IT");
+    TextBook1.buy();
+    TextBook1.buyTextBook();
+    
+
+    </script>
+
+
+</body>
+</html>

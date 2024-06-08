@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr;
+            grid-template-areas:
+            'img1 img2 aside'
+            'main main aside';
+            height: 100%;
+            grid-gap:40px
+        }
+        .img1{
+            background-color: darkgray;
+            grid-area: img1;
+        }
+        .img2{
+            background-color: darkkhaki;
+            grid-area: img2;
+        }
+        .main{
+            background-color: bisque;
+            grid-area: main;
+        }
+        .aside{
+            background-color: aquamarine;
+            grid-area: aside;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item img1">
+            <h2>img1</h2>
+        </div>
+        <div class="item img2">
+            <h2>img2</h2>
+        </div>
+        <div class="item main">
+            <h2>main</h2>
+        </div>
+        <aside class="item aside">
+            <h2>sideBar</h2>
+        </aside>
+    </div>
+</body>
+</html>

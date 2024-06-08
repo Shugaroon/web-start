@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>596</title>
+</head>
+<button onclick="mypop()">팝업</button>
+<body>
+    <script>
+        function mypop(){
+            var left = parseInt((screen.availWidth))/2;
+            var top = parseInt((screen.availHeight))/2;
+
+            console.log(left);
+            console.log(top);
+            // var top = 100;
+            var newWin = window.open("js0029.html", "", `width=500, height=400, left=${left}, top=${top}`);
+        }
+
+        
+        // newWin.moveBy(left, top); 가운데맞춤
+    </script>
+</body>
+</html>

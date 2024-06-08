@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
+class CBook{constructor(title, price){               
+    this.title = title;
+    this.price = price;
+}                                      // chrome console에서 book.prototype 확인 -> object 상속
+buy(){
+    console.log(`${this.title}책을 ${this.price}원에 구매 했어요`)
+}
+}
+
+const book1 = new CBook("front tech", 30000);
+book1.buy();
+
+class CTextBook extends CBook{
+    constructor(title, price, major){
+        super(title,price);
+        this.major = major;
+    }
+    buyTextBook(){
+        console.log(`${this.title}책을 ${this.major}전공생 할인으로 ${this.price-10000}원에 샀어요`);
+    }
+}
+const textbook1 = new CTextBook("front tech", 30000);
+textbook1.buy();
+textbook1.buyTextBook();
+
+
+
+</script>
+
+</body>
+</html>

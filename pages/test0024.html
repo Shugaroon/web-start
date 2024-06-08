@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navi ul{list-style: none;}
+        .navi li{float: left;}
+        .navi a{padding: 20px; text-decoration: none; color:black;}
+        .navi a:hover{background-color:pink}
+        .navi a:active{background-color:tomato}
+        .content{clear:both;}
+        #intro:target, #room:target{background-color: bisque}
+        textarea:disabled{background-color: grey;}
+        input:checked + label{color: red;}
+        #room-type{list-style: none;}
+        /* input[type=text], input[type=tel]{border: 1px solid blue;} */
+        input:not([type=radio]){border:1px solid blue}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="#intro">이용 안내</a></li>
+                <li><a href="#room">객실 소개</a></li>
+                <li><a href="#">예약 방법 및 요금</a></li>
+                <li><a href="#reservation">예약하기</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div id="intro">
+                <h2>이용 안내</h2>
+                <p>이용 안내문</p>
+            </div>
+            <div id="room">
+                <h2>객실 소개</h2>
+                <p>객실 소개문</p>
+            </div>
+            <div id="reservation">
+                <form action="">
+                    <textarea cols="30" rows="10" disabled>약관</textarea>
+                    <br>
+
+                    <label for="customer-name">고객명</label>
+                    <input type="text" name="customerName" id="customer-name">
+
+                    <label for="tel-num">연락처</label>
+                    <input type="tel" name="telName" id="tel-name">
+
+                    <ul id="room-type">
+                        <li>
+                            <input type="radio" name="room" id="basic">
+                            <label for="basic">기본형</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="room" id="family">
+                            <label for="family">가족형</label> 
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            </div>
+            <a href="https://www.daum.net">다음</a>
+            <input type="text">
+            <input type="text">
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

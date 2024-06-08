@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-1 424</title>
+    <style>
+        #container1{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: minmax(200px, 1fr);
+            grid-gap: 20px 30px;
+        }
+        #container2{
+            margin: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .items{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h2>grid-template</h2>
+    
+
+    
+    <div id="container1">
+        <div class="items">11111 111 1 1 1 11111 1111111111111111</div>
+        <div class="items">22 2 22222 2222 22222222222222222222</div>
+        <div class="items">33 33333333 333 3 3 3 3 33333333</div>
+        <div class="items">444444 4 444 4 44 44 44444444444</div>
+        <div class="items">555  55  5 5 5 555555 55 5555555</div>
+    </div>
+    <div id="container2">
+        <div class="items">11111 111 1 1 1 11111 1111111111111111</div>
+        <div class="items">22 2 22222 2222 22222222222222222222</div>
+        <div class="items">33 33333333 333 3 3 3 3 33333333</div>
+        <div class="items">444444 4 444 4 44 44 44444444444</div>
+        <div class="items">555  55  5 5 5 555555 55 5555555</div>
+    </div>
+</body>
+</html>

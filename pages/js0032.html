@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>592 팝업창의 내용을 메인창으로</title>
+  </head>
+  <body>
+    <h1>메인창</h1>
+
+    <script>
+      var newWin = window.open("js0033.html", "", "width=250, height=200");
+      newWin.opener = self;
+    </script>
+  </body>
+</html>

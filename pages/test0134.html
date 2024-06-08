@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //JSON (javascript object notation)
+
+        //Javascript 객체
+        const student = {
+            name : "이현경",
+            career: "publisher"
+        }
+        console.log(student.career);
+        
+        // // JSON
+        
+        // const StudentJson = {
+        //     "name":"이현경",
+        //     "career":"publisher"
+        // }
+        const studentJson = JSON.stringify(student); // 객체 -> JSON형 변경
+        console.log(student);
+        console.log(studentJson);
+        
+        console.log(studentJson.name);
+
+        const studentAgain = JSON.parse(studentJson); // JSON형 -> 객체로 다시 변경
+        console.log(studentAgain)
+        console.log(studentAgain.name);
+            
+        
+
+    </script>
+</body>
+</html>

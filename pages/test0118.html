@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="info"></div>
+    <button onclick="addC()"></button>    
+
+    <script>
+        function addC(){
+            let newImg = document.createElement("img"); //이미지 요소를 만들고 변수 newImg로 지정
+            let src = document.createAttribute("src"); 
+            src.value = "img/하니8.png";
+            newImg.setAttributeNode(src);
+            document.getElementById("info").appendChild(newImg);
+        }
+    </script>
+</body>
+</html>

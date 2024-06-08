@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>1.</p>
+    <script>
+        var s_num = parseint(prompt("시작정수"));
+        var e_num = parseint(prompt("종료정수"));
+        var sum = 0;
+    
+        for(i = s_num; i <= e_num; i++){
+
+        
+          sum = sum + i // sum += i
+        }
+        document.write(`sum of s_num to e_num = ${sum}`)
+    </script>
+     -->
+    
+    
+    
+    <!-- <p>2.</p>
+    <script>
+        // for(var num = 60; num >=0; num--){
+        //     if(num === 0){document.write(`<br>발사!`)}
+        //     else{document.write(`<p>${num}</p>`);}
+            
+        // }
+    </script> -->
+
+    <!-- <p>3.</p>
+    <script>
+
+        
+        
+        for(var i = 1; i <= 9; i++){
+            
+            for(var j = 1; j <= 9; j++){
+                document.write(`<span>${i * j}</span>`)
+            }
+            document.write("<br>")
+        }
+
+        
+
+
+       
+        
+    </script> -->
+
+
+    <script>
+
+const arr = []
+while (true) {
+  const input = parseInt(prompt("자연수입력 ㄱ"))
+  if (input < 0) {
+    continue
+  } 
+  if (input === 0 && arr.length > 0) {
+    break
+  }
+  arr.push(input)
+}
+console.log(`최소값 : ${Math.min(...arr)}`)
+console.log(`최대값 : ${Math.max(...arr)}`)
+
+const filtered = arr.filter((num) => num >0)
+const avg = arr => arr.reduce((p, c) => p + c, 0) / arr.length
+console.log(`평균 ${avg(filtered)}`)
+    
+    </script>
+
+</body>
+</html>
